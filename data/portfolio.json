@@ -1,0 +1,132 @@
+{
+  "personal": {
+    "name": "Favour Oti",
+    "logo": "favour.",
+    "title": "SOFTWARE DEVELOPER",
+    "email": "favourgraceoti@gmail.com",
+    "location": "Ottawa, Canada",
+    "bio": "I build polished, user-focused web and mobile experiences — from travel platforms to EV marketplaces — with clean code and thoughtful design.",
+    "aboutText": "I'm a software developer pursuing my Master's in Software Engineering at Carleton University. I specialize in building performant, accessible web and mobile applications that solve real problems. With experience spanning travel tech, hospitality, EV platforms, and fintech, I bring a product-minded approach to every project. I care deeply about clean architecture, smooth interactions, and writing code that other developers enjoy working with.",
+    "socialLinks": {
+      "github": "https://github.com/favouroti",
+      "linkedin": "https://linkedin.com/in/favouroti"
+    }
+  },
+  "navLinks": [
+    { "label": "Home", "href": "#home" },
+    { "label": "About", "href": "#about" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Projects", "href": "#projects" }
+  ],
+  "stats": [
+    { "value": "2+", "label": "Years of Experience" },
+    { "value": "6+", "label": "Completed Projects" },
+    { "value": "M.Eng", "label": "In Progress" }
+  ],
+  "techStack": {
+    "languages": [
+      { "name": "TypeScript", "icon": "/icons/typescript.svg" },
+      { "name": "JavaScript", "icon": "/icons/javascript.svg" },
+      { "name": "Dart", "icon": "/icons/dart.svg" },
+      { "name": "Python", "icon": "/icons/python.svg" },
+      { "name": "HTML", "icon": "/icons/html.svg" },
+      { "name": "CSS", "icon": "/icons/css.svg" }
+    ],
+    "frameworks": [
+      { "name": "React", "icon": "/icons/react.svg" },
+      { "name": "Next.js", "icon": "/icons/nextjs.svg" },
+      { "name": "Flutter", "icon": "/icons/flutter.svg" },
+      { "name": "Redux", "icon": "/icons/redux.svg" },
+      { "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" },
+      { "name": "Node.js", "icon": "/icons/nodejs.svg" }
+    ],
+    "tools": [
+      { "name": "Git", "icon": "/icons/git.svg" },
+      { "name": "Firebase", "icon": "/icons/firebase.svg" },
+      { "name": "Figma", "icon": "/icons/figma.svg" },
+      { "name": "REST APIs", "icon": "/icons/api.svg" },
+      { "name": "Google Maps", "icon": "/icons/googlemaps.svg" }
+    ]
+  },
+  "experience": [
+    {
+      "role": "Frontend Developer",
+      "company": "Codematic",
+      "startDate": "Jan 2024",
+      "endDate": "Aug 2024",
+      "description": "Developed and maintained responsive web applications for hospitality and travel clients. Built reusable component libraries, implemented booking flows, and optimized performance across multiple projects.",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "REST APIs"]
+    },
+    {
+      "role": "Mobile & Web Developer",
+      "company": "JeGO",
+      "startDate": "Jun 2023",
+      "endDate": "Dec 2023",
+      "description": "Built the cross-platform EV rental marketplace from the ground up. Integrated Google Maps for real-time vehicle tracking, implemented payment flows, and delivered both web and mobile interfaces.",
+      "technologies": ["React", "Flutter", "Dart", "Google Maps API", "Firebase", "REST APIs"]
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "Layer3",
+      "startDate": "Jan 2023",
+      "endDate": "May 2023",
+      "description": "Contributed to fintech dashboard interfaces, building data visualization components and ensuring responsive, accessible experiences across devices.",
+      "technologies": ["React", "TypeScript", "Recharts", "Tailwind CSS", "Git"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Kinnect",
+      "subtitle": "African Travel Discovery",
+      "description": "A platform connecting travelers to authentic African experiences, featuring curated destinations, local guides, and seamless trip planning.",
+      "technologies": ["Next.js", "TypeScript", "Redux"],
+      "link": "https://kinnectmetoafrica.com",
+      "color": "#EC4899",
+      "thumbnail": "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80"
+    },
+    {
+      "title": "Revibe",
+      "subtitle": "Hospitality Booking",
+      "description": "A modern booking platform for beach resorts and hospitality venues with real-time availability, analytics dashboards, and streamlined reservation management.",
+      "technologies": ["Next.js", "TypeScript", "Recharts"],
+      "link": "https://revibebeach.com",
+      "color": "#F472B6",
+      "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+    },
+    {
+      "title": "JeGO",
+      "subtitle": "EV Rental Marketplace",
+      "description": "Cross-platform electric vehicle rental marketplace with real-time GPS tracking, payment integration, and both driver and rider interfaces.",
+      "technologies": ["React", "Flutter", "Google Maps"],
+      "link": "https://jegopods.com",
+      "color": "#DB2777",
+      "thumbnail": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80"
+    },
+    {
+      "title": "StreamIt",
+      "subtitle": "Movie Discovery",
+      "description": "A sleek movie discovery app powered by the TMDB API, featuring trending films, search functionality, and detailed movie information.",
+      "technologies": ["Next.js", "TMDB API", "Tailwind CSS"],
+      "link": "https://streamit-movie-site.vercel.app",
+      "color": "#BE185D",
+      "thumbnail": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80"
+    },
+    {
+      "title": "Havara Beach House",
+      "subtitle": "Luxury Property Booking",
+      "description": "Premium property booking site for a luxury beach house, featuring image galleries, availability calendars, and integrated reservation system.",
+      "technologies": ["Next.js", "Redux", "React Query"],
+      "color": "#E11D89",
+      "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+    },
+    {
+      "title": "Dr. Tolu",
+      "subtitle": "Professional Portfolio",
+      "description": "A clean, professional portfolio website showcasing medical expertise, publications, and patient resources with a focus on accessibility.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Firebase"],
+      "link": "https://dr-tolu-site.web.app",
+      "color": "#D946A8",
+      "thumbnail": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+    }
+  ]
+}
