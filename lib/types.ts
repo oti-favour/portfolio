@@ -49,9 +49,15 @@ export interface Project {
   subtitle: string;
   description: string;
   technologies: string[];
+  /** Marketing / live website */
   link?: string;
+  /** iOS App Store */
+  appStoreUrl?: string;
+  /** Google Play */
+  playStoreUrl?: string;
   color: string;
   thumbnail?: string;
+  featured?: boolean;
 }
 
 export interface PortfolioData {

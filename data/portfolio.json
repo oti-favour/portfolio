@@ -5,11 +5,11 @@
     "title": "SOFTWARE DEVELOPER",
     "email": "favourgraceoti@gmail.com",
     "location": "Ottawa, Canada",
-    "bio": "I build polished, user-focused web and mobile experiences — from travel platforms to EV marketplaces — with clean code and thoughtful design.",
+    "bio": "I build polished, user-focused web and mobile experiences from travel platforms to EV marketplaces with clean code and thoughtful design.",
     "aboutText": "I'm a software developer pursuing my Master's in Software Engineering at Carleton University. I specialize in building performant, accessible web and mobile applications that solve real problems. With experience spanning travel tech, hospitality, EV platforms, and fintech, I bring a product-minded approach to every project. I care deeply about clean architecture, smooth interactions, and writing code that other developers enjoy working with.",
     "socialLinks": {
-      "github": "https://github.com/favouroti",
-      "linkedin": "https://linkedin.com/in/favouroti"
+      "github": "https://github.com/oti-favour",
+      "linkedin": "https://linkedin.com/in/oti-favour"
     }
   },
   "navLinks": [
@@ -28,7 +28,6 @@
       { "name": "TypeScript", "icon": "/icons/typescript.svg" },
       { "name": "JavaScript", "icon": "/icons/javascript.svg" },
       { "name": "Dart", "icon": "/icons/dart.svg" },
-      { "name": "Python", "icon": "/icons/python.svg" },
       { "name": "HTML", "icon": "/icons/html.svg" },
       { "name": "CSS", "icon": "/icons/css.svg" }
     ],
@@ -44,8 +43,7 @@
       { "name": "Git", "icon": "/icons/git.svg" },
       { "name": "Firebase", "icon": "/icons/firebase.svg" },
       { "name": "Figma", "icon": "/icons/figma.svg" },
-      { "name": "REST APIs", "icon": "/icons/api.svg" },
-      { "name": "Google Maps", "icon": "/icons/googlemaps.svg" }
+      { "name": "REST APIs", "icon": "/icons/api.svg" }
     ]
   },
   "experience": [
@@ -75,58 +73,70 @@
     }
   ],
   "projects": [
+    
     {
       "title": "Kinnect",
-      "subtitle": "African Travel Discovery",
+      "subtitle": "African travel discovery",
       "description": "A platform connecting travelers to authentic African experiences, featuring curated destinations, local guides, and seamless trip planning.",
       "technologies": ["Next.js", "TypeScript", "Redux"],
       "link": "https://kinnectmetoafrica.com",
       "color": "#EC4899",
-      "thumbnail": "https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=800&q=80"
+      "thumbnail": "/screenshots/kinnect.jpg"
     },
     {
       "title": "Revibe",
-      "subtitle": "Hospitality Booking",
+      "subtitle": "Hospitality booking",
       "description": "A modern booking platform for beach resorts and hospitality venues with real-time availability, analytics dashboards, and streamlined reservation management.",
       "technologies": ["Next.js", "TypeScript", "Recharts"],
       "link": "https://revibebeach.com",
       "color": "#F472B6",
-      "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+      "thumbnail": "/screenshots/revibe.jpg"
     },
     {
       "title": "JeGO",
-      "subtitle": "EV Rental Marketplace",
-      "description": "Cross-platform electric vehicle rental marketplace with real-time GPS tracking, payment integration, and both driver and rider interfaces.",
-      "technologies": ["React", "Flutter", "Google Maps"],
+      "subtitle": "Marketing website",
+      "description": "Product and brand site for JéGO — electric vehicles, Power Pods, and the broader clean-energy story. Built with the marketing team’s content and design system.",
+      "technologies": ["React", "Next.js"],
       "link": "https://jegopods.com",
-      "color": "#DB2777",
-      "thumbnail": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80"
+      "color": "#0891B2",
+      "thumbnail": "/screenshots/jego.jpg"
     },
     {
       "title": "StreamIt",
-      "subtitle": "Movie Discovery",
+      "subtitle": "Movie discovery",
       "description": "A sleek movie discovery app powered by the TMDB API, featuring trending films, search functionality, and detailed movie information.",
       "technologies": ["Next.js", "TMDB API", "Tailwind CSS"],
       "link": "https://streamit-movie-site.vercel.app",
       "color": "#BE185D",
-      "thumbnail": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80"
+      "thumbnail": "/screenshots/streamit.jpg"
     },
     {
       "title": "Havara Beach House",
-      "subtitle": "Luxury Property Booking",
+      "subtitle": "Luxury property booking",
       "description": "Premium property booking site for a luxury beach house, featuring image galleries, availability calendars, and integrated reservation system.",
       "technologies": ["Next.js", "Redux", "React Query"],
+      "link": "https://havara.com",
       "color": "#E11D89",
-      "thumbnail": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+      "thumbnail": "/screenshots/havara.png"
     },
     {
       "title": "Dr. Tolu",
-      "subtitle": "Professional Portfolio",
+      "subtitle": "Professional portfolio",
       "description": "A clean, professional portfolio website showcasing medical expertise, publications, and patient resources with a focus on accessibility.",
       "technologies": ["HTML", "CSS", "JavaScript", "Firebase"],
       "link": "https://dr-tolu-site.web.app",
       "color": "#D946A8",
-      "thumbnail": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+      "thumbnail": "/screenshots/drtolu.jpg"
+    },
+    {
+      "title": "JeGO App",
+      "subtitle": "Flutter · App Store",
+      "description": "Native mobile app for the EV rental experience — browse vehicles, live maps, bookings, and payments. Built with Flutter and shipped on iOS.",
+      "technologies": ["Flutter", "Dart", "Firebase", "Google Maps"],
+      "appStoreUrl": "https://apps.apple.com/ng/app/j%C3%A9gox/id6478828089",
+      "color": "#DB2777",
+      "thumbnail": "/screenshots/jegoapp.png",
+      "featured": true
     }
   ]
 }

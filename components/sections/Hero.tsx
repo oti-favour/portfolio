@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
-import { TextScramble } from "@/components/ui/TextScramble";
 import { StatCard } from "@/components/ui/StatCard";
 import portfolioData from "@/data/portfolio.json";
 import type { PortfolioData } from "@/lib/types";
@@ -81,14 +80,10 @@ export function Hero() {
           style={{ fontSize: "clamp(2.5rem, 9.5vw, 10rem)" }}
         >
           <div className="overflow-hidden">
-            <div className="hero-line">
-              <TextScramble text="SOFTWARE" />
-            </div>
+            <div className="hero-line">SOFTWARE</div>
           </div>
           <div className="overflow-hidden" style={{ paddingLeft: "10vw" }}>
-            <div className="hero-line">
-              <TextScramble text="DEVELOPER" />
-            </div>
+            <div className="hero-line">DEVELOPER</div>
           </div>
         </h1>
         <p

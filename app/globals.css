@@ -73,14 +73,9 @@ html.lenis, html.lenis body {
   color: #525252;
 }
 
-/* Utility: compositor hint for project hover images */
-.project-hover-image {
-  will-change: transform, opacity;
-}
-
 /* FOUC prevention for scroll-animated elements */
 .experience-entry,
-.project-entry,
+.project-row-wrap,
 .tech-category {
   opacity: 0;
 }
