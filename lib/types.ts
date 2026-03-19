@@ -12,6 +12,8 @@ export interface Personal {
   bio: string;
   aboutText: string;
   socialLinks: SocialLinks;
+  /** Path to resume PDF in public folder (e.g. /resume.pdf) */
+  resume?: string;
 }
 
 export interface NavLink {

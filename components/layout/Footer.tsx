@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { FileDown, Github, Linkedin, Mail } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import portfolioData from "@/data/portfolio.json";
@@ -49,6 +49,18 @@ export function Footer() {
           <Mail size={20} />
           {data.personal.email}
         </a>
+        {data.personal.resume && (
+          <a
+            href={data.personal.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download resume"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-5 py-2.5 text-sm text-muted transition-colors hover:border-accent/40 hover:text-accent"
+          >
+            <FileDown size={18} />
+            Download resume
+          </a>
+        )}
         <div className="flex items-center gap-6">
           <a
             href={data.personal.socialLinks.github}

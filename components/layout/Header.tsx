@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Menu, X } from "lucide-react";
+import { FileDown, Github, Linkedin, Menu, X } from "lucide-react";
 import portfolioData from "@/data/portfolio.json";
 import type { PortfolioData } from "@/lib/types";
 
@@ -59,8 +59,20 @@ export function Header() {
           ))}
         </ul>
 
-        {/* Desktop Social Links */}
+        {/* Desktop Social + Resume */}
         <div className="hidden items-center gap-4 md:flex">
+          {data.personal.resume && (
+            <a
+              href={data.personal.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download resume"
+              className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 px-4 py-2 text-sm text-muted transition-colors hover:border-accent/40 hover:text-accent"
+            >
+              <FileDown size={16} />
+              Resume
+            </a>
+          )}
           <a
             href={data.personal.socialLinks.github}
             target="_blank"
@@ -111,7 +123,19 @@ export function Header() {
               {link.label}
             </a>
           ))}
-          <div className="mt-4 flex items-center gap-6">
+          <div className="mt-4 flex flex-col items-center gap-6 sm:flex-row">
+            {data.personal.resume && (
+              <a
+                href={data.personal.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download resume"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-5 py-2.5 text-foreground transition-colors hover:border-accent/40 hover:text-accent"
+              >
+                <FileDown size={20} />
+                Resume
+              </a>
+            )}
             <a
               href={data.personal.socialLinks.github}
               target="_blank"

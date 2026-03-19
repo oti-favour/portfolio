@@ -9,8 +9,9 @@
     "aboutText": "I'm a software developer pursuing my Master's in Software Engineering at Carleton University. I specialize in building performant, accessible web and mobile applications that solve real problems. With experience spanning travel tech, hospitality, EV platforms, and fintech, I bring a product-minded approach to every project. I care deeply about clean architecture, smooth interactions, and writing code that other developers enjoy working with.",
     "socialLinks": {
       "github": "https://github.com/oti-favour",
-      "linkedin": "https://linkedin.com/in/oti-favour"
-    }
+      "linkedin": "https://www.linkedin.com/in/oti-favour/"
+    },
+    "resume": "/resume.pdf"
   },
   "navLinks": [
     { "label": "Home", "href": "#home" },
@@ -36,8 +37,8 @@
       { "name": "Next.js", "icon": "/icons/nextjs.svg" },
       { "name": "Flutter", "icon": "/icons/flutter.svg" },
       { "name": "Redux", "icon": "/icons/redux.svg" },
-      { "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" },
-      { "name": "Node.js", "icon": "/icons/nodejs.svg" }
+      { "name": "Tailwind CSS", "icon": "/icons/tailwind.svg" }
+
     ],
     "tools": [
       { "name": "Git", "icon": "/icons/git.svg" },
@@ -50,24 +51,24 @@
     {
       "role": "Frontend Developer",
       "company": "Codematic",
-      "startDate": "Jan 2024",
-      "endDate": "Aug 2024",
+      "startDate": "Aug 2024",
+      "endDate": "Present",
       "description": "Developed and maintained responsive web applications for hospitality and travel clients. Built reusable component libraries, implemented booking flows, and optimized performance across multiple projects.",
       "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "REST APIs"]
     },
     {
       "role": "Mobile & Web Developer",
       "company": "JeGO",
-      "startDate": "Jun 2023",
-      "endDate": "Dec 2023",
+      "startDate": "Jan 2025",
+      "endDate": "Present",
       "description": "Built the cross-platform EV rental marketplace from the ground up. Integrated Google Maps for real-time vehicle tracking, implemented payment flows, and delivered both web and mobile interfaces.",
       "technologies": ["React", "Flutter", "Dart", "Google Maps API", "Firebase", "REST APIs"]
     },
     {
       "role": "Frontend Developer",
       "company": "Layer3",
-      "startDate": "Jan 2023",
-      "endDate": "May 2023",
+      "startDate": "",
+      "endDate": "Aug 2024",
       "description": "Contributed to fintech dashboard interfaces, building data visualization components and ensuring responsive, accessible experiences across devices.",
       "technologies": ["React", "TypeScript", "Recharts", "Tailwind CSS", "Git"]
     }
