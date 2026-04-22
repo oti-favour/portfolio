@@ -53,12 +53,17 @@ export interface Project {
   technologies: string[];
   /** Marketing / live website */
   link?: string;
+  /** Source repository */
+  githubUrl?: string;
   /** iOS App Store */
   appStoreUrl?: string;
   /** Google Play */
   playStoreUrl?: string;
   color: string;
+  /** Single preview image (used if `thumbnails` is omitted) */
   thumbnail?: string;
+  /** One or more preview images on hover; overrides `thumbnail` when set */
+  thumbnails?: string[];
   featured?: boolean;
 }
 

@@ -21,7 +21,7 @@
   ],
   "stats": [
     { "value": "2+", "label": "Years of Experience" },
-    { "value": "6+", "label": "Completed Projects" },
+    { "value": "7+", "label": "Projects" },
     { "value": "M.Eng", "label": "In Progress" }
   ],
   "techStack": {
@@ -74,7 +74,25 @@
     }
   ],
   "projects": [
-    
+    {
+      "title": "JeGO App",
+      "subtitle": "Flutter · App Store",
+      "description": "Native mobile app for the EV rental experience — browse vehicles, live maps, bookings, and payments. Built with Flutter and shipped on iOS.",
+      "technologies": ["Flutter", "Dart", "Firebase", "Google Maps"],
+      "appStoreUrl": "https://apps.apple.com/ng/app/j%C3%A9gox/id6478828089",
+      "color": "#DB2777",
+      "thumbnail": "/screenshots/jegoapp.png",
+      "featured": true
+    },
+    {
+      "title": "JéGO Enterprise Portal",
+      "subtitle": "Partner Command dashboard",
+      "description": "Web dashboard for fleet partners — billings and earnings, fleet map and live status, booking operations (schedule, routes, incidents), and station tooling under Command by JéGO X.",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      "link": "https://command.jegopods.com/billings/earnings",
+      "color": "#EA580C",
+      "thumbnail": "/screenshots/jego-enterprise-portal.png"
+    },
     {
       "title": "Kinnect",
       "subtitle": "African travel discovery",
@@ -112,32 +130,16 @@
       "thumbnail": "/screenshots/streamit.jpg"
     },
     {
-      "title": "Havara Beach House",
-      "subtitle": "Luxury property booking",
-      "description": "Premium property booking site for a luxury beach house, featuring image galleries, availability calendars, and integrated reservation system.",
-      "technologies": ["Next.js", "Redux", "React Query"],
-      "link": "https://havara.com",
-      "color": "#E11D89",
-      "thumbnail": "/screenshots/havara.png"
-    },
-    {
-      "title": "Dr. Tolu",
-      "subtitle": "Professional portfolio",
-      "description": "A clean, professional portfolio website showcasing medical expertise, publications, and patient resources with a focus on accessibility.",
-      "technologies": ["HTML", "CSS", "JavaScript", "Firebase"],
-      "link": "https://dr-tolu-site.web.app",
-      "color": "#D946A8",
-      "thumbnail": "/screenshots/drtolu.jpg"
-    },
-    {
-      "title": "JeGO App",
-      "subtitle": "Flutter · App Store",
-      "description": "Native mobile app for the EV rental experience — browse vehicles, live maps, bookings, and payments. Built with Flutter and shipped on iOS.",
-      "technologies": ["Flutter", "Dart", "Firebase", "Google Maps"],
-      "appStoreUrl": "https://apps.apple.com/ng/app/j%C3%A9gox/id6478828089",
-      "color": "#DB2777",
-      "thumbnail": "/screenshots/jegoapp.png",
-      "featured": true
+      "title": "Billie",
+      "subtitle": "Mobile · Bill tracking",
+      "description": "Local-first bill tracker with onboarding, smart due-date reminders, and Ask Billie — an in-app assistant that uses your bills as context (not on the App Store yet; code on GitHub).",
+      "technologies": ["Flutter", "Dart", "Riverpod", "Hive", "Firebase"],
+      "githubUrl": "https://github.com/oti-favour/billie",
+      "color": "#7C3AED",
+      "thumbnails": [
+        "/screenshots/billie.png",
+        "/screenshots/billie-onboarding.png"
+      ]
     }
   ]
 }
