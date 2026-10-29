@@ -122,12 +122,13 @@ export function Projects() {
       if (!items || !items.length) return;
       gsap.from(items, {
         opacity: 0,
-        y: 50,
-        scale: 0.9,
-        duration: 0.6,
-        ease: "back.out(1.5)",
-        stagger: 0.08,
-        scrollTrigger: { trigger: trackRef.current, start: "top 82%" },
+        y: 120,
+        rotateZ: (i: number) => (i % 2 === 0 ? -8 : 8),
+        scale: 0.8,
+        duration: 0.85,
+        ease: "power3.out",
+        stagger: 0.14,
+        scrollTrigger: { trigger: trackRef.current, start: "top 85%" },
       });
     },
     { scope: sectionRef }
