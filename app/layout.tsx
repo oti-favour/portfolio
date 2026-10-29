@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Inter } from "next/font/google";
+import { Anton, Inter, JetBrains_Mono } from "next/font/google";
 import { SmoothScrollProvider } from "@/components/providers/SmoothScrollProvider";
 import "./globals.css";
 
@@ -16,13 +16,19 @@ const inter = Inter({
   display: "swap",
 });
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Favour Oti — Software Developer",
+  title: "Favour Oti | Software Engineer",
   description:
-    "Software developer specializing in building polished, user-focused web and mobile experiences. React, Next.js, Flutter, and TypeScript.",
+    "Software engineer building production web and mobile apps across travel, hospitality, EV, and enterprise supply chain. React, Next.js, Flutter, and TypeScript.",
   keywords: [
     "Favour Oti",
-    "Software Developer",
+    "Software Engineer",
     "Frontend Developer",
     "React",
     "Next.js",
@@ -31,9 +37,9 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   openGraph: {
-    title: "Favour Oti — Software Developer",
+    title: "Favour Oti | Software Engineer",
     description:
-      "Software developer specializing in building polished, user-focused web and mobile experiences.",
+      "Software engineer building production web and mobile apps across travel, hospitality, EV, and enterprise supply chain.",
     type: "website",
   },
 };
@@ -44,7 +50,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${anton.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      className={`${anton.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
       <body className="antialiased">
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>

@@ -36,7 +36,7 @@ export function AnimatedText({
 
       if (reducedMotion) {
         el.querySelectorAll<HTMLSpanElement>(".highlight-word").forEach((span) => {
-          span.style.color = "#EDEDED";
+          span.style.color = "#2A221E";
         });
         return;
       }
@@ -44,7 +44,7 @@ export function AnimatedText({
       const wordSpans = el.querySelectorAll(".highlight-word");
 
       gsap.to(wordSpans, {
-        color: "#EDEDED",
+        color: "#2A221E",
         stagger: 0.05,
         scrollTrigger: {
           trigger: el,

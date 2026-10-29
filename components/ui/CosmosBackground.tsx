@@ -58,7 +58,7 @@ export function CosmosBackground() {
       for (const p of particles) {
         ctx!.beginPath();
         ctx!.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx!.fillStyle = `rgba(237, 237, 237, ${p.opacity})`;
+        ctx!.fillStyle = `rgba(219, 39, 119, ${p.opacity})`;
         ctx!.fill();
       }
     }

@@ -2,11 +2,11 @@
   "personal": {
     "name": "Favour Oti",
     "logo": "favour.",
-    "title": "SOFTWARE DEVELOPER",
+    "title": "SOFTWARE ENGINEER",
     "email": "favourgraceoti@gmail.com",
     "location": "Ottawa, Canada",
-    "bio": "I build polished, user-focused web and mobile experiences from travel platforms to EV marketplaces with clean code and thoughtful design.",
-    "aboutText": "I'm a software developer pursuing my Master's in Software Engineering at Carleton University. I specialize in building performant, accessible web and mobile applications that solve real problems. With experience spanning travel tech, hospitality, EV platforms, and fintech, I bring a product-minded approach to every project. I care deeply about clean architecture, smooth interactions, and writing code that other developers enjoy working with.",
+    "bio": "I build production web and mobile apps across travel, hospitality, EV, and enterprise supply chain, with clean code, solid tests, and thoughtful design.",
+    "aboutText": "I'm a software engineer pursuing my Master's in Software Engineering at Carleton University. I build performant, accessible web and mobile applications that solve real problems across travel tech, hospitality, EV, and enterprise supply chain platforms. I care about clean architecture, strong test coverage, smooth interactions, and writing code that other developers enjoy working with.",
     "socialLinks": {
       "github": "https://github.com/oti-favour",
       "linkedin": "https://www.linkedin.com/in/oti-favour/"
@@ -16,8 +16,8 @@
   "navLinks": [
     { "label": "Home", "href": "#home" },
     { "label": "About", "href": "#about" },
-    { "label": "Experience", "href": "#experience" },
-    { "label": "Projects", "href": "#projects" }
+    { "label": "Work", "href": "#projects" },
+    { "label": "Experience", "href": "#experience" }
   ],
   "stats": [
     { "value": "2+", "label": "Years of Experience" },
@@ -44,40 +44,50 @@
       { "name": "Git", "icon": "/icons/git.svg" },
       { "name": "Firebase", "icon": "/icons/firebase.svg" },
       { "name": "Figma", "icon": "/icons/figma.svg" },
+      { "name": "Google Maps", "icon": "/icons/googlemaps.svg" },
       { "name": "REST APIs", "icon": "/icons/api.svg" }
     ]
   },
   "experience": [
     {
-      "role": "Frontend Developer",
-      "company": "Codematic",
-      "startDate": "Aug 2024",
-      "endDate": "Present",
-      "description": "Developed and maintained responsive web applications for hospitality and travel clients. Built reusable component libraries, implemented booking flows, and optimized performance across multiple projects.",
-      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux", "REST APIs"]
+      "role": "Software Engineering Intern",
+      "company": "Kinaxis",
+      "startDate": "May 2026",
+      "endDate": "Aug 2026",
+      "description": "Investigated and fixed bugs in Maestro, an enterprise supply-chain planning product, navigating a large established codebase alongside senior engineers. Strengthened coverage with Playwright end-to-end and Jest unit tests, and used AI coding tools to speed up debugging and code comprehension.",
+      "technologies": ["Playwright", "Jest", "Git", "GitHub Copilot", "Claude Code", "Cursor"]
     },
     {
-      "role": "Mobile & Web Developer",
+      "role": "Software Developer",
+      "company": "Codematic",
+      "startDate": "Sep 2024",
+      "endDate": "Present",
+      "description": "Build production web apps for travel and hospitality clients, including Kinnect (54+ African countries) and Revibe, with reusable components, admin dashboards, and a shared state architecture across Redux Toolkit and TanStack Query. Review pull requests and ship mobile-first, responsive features.",
+      "technologies": ["Next.js", "TypeScript", "React", "Redux Toolkit", "TanStack Query", "Tailwind CSS"]
+    },
+    {
+      "role": "Software Developer",
       "company": "JeGO",
       "startDate": "Jan 2025",
-      "endDate": "Present",
-      "description": "Built the cross-platform EV rental marketplace from the ground up. Integrated Google Maps for real-time vehicle tracking, implemented payment flows, and delivered both web and mobile interfaces.",
-      "technologies": ["React", "Flutter", "Dart", "Google Maps API", "Firebase", "REST APIs"]
+      "endDate": "Jul 2026",
+      "description": "Built a Flutter/Dart mobile app for an EV rental marketplace with booking for vehicles and charging, integrated the Paystack payment API across customer and merchant flows, and added Google Maps for location tracking. Also shipped React features for the company website.",
+      "technologies": ["Flutter", "Dart", "Paystack", "Google Maps API", "React", "Firebase"]
     },
     {
       "role": "Frontend Developer",
       "company": "Layer3",
-      "startDate": "",
-      "endDate": "Aug 2024",
-      "description": "Contributed to fintech dashboard interfaces, building data visualization components and ensuring responsive, accessible experiences across devices.",
-      "technologies": ["React", "TypeScript", "Recharts", "Tailwind CSS", "Git"]
+      "startDate": "Aug 2023",
+      "endDate": "Oct 2024",
+      "description": "Redesigned the payment checkout flow to improve the user experience and built responsive client websites, integrating REST APIs and contributing smaller backend features in Laravel.",
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "Bootstrap", "Laravel", "REST APIs"]
     }
   ],
   "projects": [
     {
       "title": "JeGO App",
       "subtitle": "Flutter · App Store",
-      "description": "Native mobile app for the EV rental experience — browse vehicles, live maps, bookings, and payments. Built with Flutter and shipped on iOS.",
+      "tagline": "rent an electric ride, straight from your phone",
+      "description": "Native mobile app for the EV rental experience: browse vehicles, live maps, bookings, and payments. Built with Flutter and shipped on iOS.",
       "technologies": ["Flutter", "Dart", "Firebase", "Google Maps"],
       "appStoreUrl": "https://apps.apple.com/ng/app/j%C3%A9gox/id6478828089",
       "color": "#DB2777",
@@ -87,7 +97,8 @@
     {
       "title": "JéGO Enterprise Portal",
       "subtitle": "Partner Command dashboard",
-      "description": "Web dashboard for fleet partners — billings and earnings, fleet map and live status, booking operations (schedule, routes, incidents), and station tooling under Command by JéGO X.",
+      "tagline": "mission control for EV fleet partners",
+      "description": "Web dashboard for fleet partners: billings and earnings, fleet map and live status, booking operations (schedule, routes, incidents), and station tooling under Command by JéGO X.",
       "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       "link": "https://command.jegopods.com/billings/earnings",
       "color": "#EA580C",
@@ -96,6 +107,7 @@
     {
       "title": "Kinnect",
       "subtitle": "African travel discovery",
+      "tagline": "54 countries, one place to plan the trip",
       "description": "A platform connecting travelers to authentic African experiences, featuring curated destinations, local guides, and seamless trip planning.",
       "technologies": ["Next.js", "TypeScript", "Redux"],
       "link": "https://kinnectmetoafrica.com",
@@ -105,6 +117,7 @@
     {
       "title": "Revibe",
       "subtitle": "Hospitality booking",
+      "tagline": "beach bookings without the back-and-forth",
       "description": "A modern booking platform for beach resorts and hospitality venues with real-time availability, analytics dashboards, and streamlined reservation management.",
       "technologies": ["Next.js", "TypeScript", "Recharts"],
       "link": "https://revibebeach.com",
@@ -114,7 +127,8 @@
     {
       "title": "JeGO",
       "subtitle": "Marketing website",
-      "description": "Product and brand site for JéGO — electric vehicles, Power Pods, and the broader clean-energy story. Built with the marketing team’s content and design system.",
+      "tagline": "the clean-energy story, told well",
+      "description": "Product and brand site for JéGO: electric vehicles, Power Pods, and the broader clean-energy story. Built with the marketing team’s content and design system.",
       "technologies": ["React", "Next.js"],
       "link": "https://jegopods.com",
       "color": "#0891B2",
@@ -123,6 +137,7 @@
     {
       "title": "StreamIt",
       "subtitle": "Movie discovery",
+      "tagline": "a cozy spot to pick your next watch",
       "description": "A sleek movie discovery app powered by the TMDB API, featuring trending films, search functionality, and detailed movie information.",
       "technologies": ["Next.js", "TMDB API", "Tailwind CSS"],
       "link": "https://streamit-movie-site.vercel.app",
@@ -132,7 +147,8 @@
     {
       "title": "Billie",
       "subtitle": "Mobile · Bill tracking",
-      "description": "Local-first bill tracker with onboarding, smart due-date reminders, and Ask Billie — an in-app assistant that uses your bills as context (not on the App Store yet; code on GitHub).",
+      "tagline": "your bills, organized and a little friendly",
+      "description": "Local-first bill tracker with onboarding, smart due-date reminders, and Ask Billie, an in-app assistant that uses your bills as context (not on the App Store yet; code on GitHub).",
       "technologies": ["Flutter", "Dart", "Riverpod", "Hive", "Firebase"],
       "githubUrl": "https://github.com/oti-favour/billie",
       "color": "#7C3AED",

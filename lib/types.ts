@@ -49,6 +49,8 @@ export interface Experience {
 export interface Project {
   title: string;
   subtitle: string;
+  /** Short playful one-liner shown on the project card */
+  tagline?: string;
   description: string;
   technologies: string[];
   /** Marketing / live website */

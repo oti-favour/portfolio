@@ -21,6 +21,8 @@ export function ProjectListRow({ project }: ProjectListRowProps) {
     thumbnails,
   } = project;
 
+  const primaryUrl = link || appStoreUrl || playStoreUrl || githubUrl;
+
   const previewSources =
     thumbnails && thumbnails.length > 0
       ? thumbnails
@@ -44,10 +46,24 @@ export function ProjectListRow({ project }: ProjectListRowProps) {
   ].filter(Boolean) as { href: string; label: string }[];
 
   return (
-    <div className="group flex flex-col border-b border-border py-10 lg:flex-row lg:items-center lg:gap-12 lg:py-14">
+    <div
+      data-cursor="view"
+      className="group flex flex-col border-b border-border py-10 lg:flex-row lg:items-center lg:gap-12 lg:py-14"
+    >
       <div className="min-w-0 flex-1 lg:max-w-2xl">
         <h3 className="font-display text-3xl uppercase tracking-tight text-foreground lg:text-4xl xl:text-5xl">
-          {title}
+          {primaryUrl ? (
+            <a
+              href={primaryUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-accent"
+            >
+              {title}
+            </a>
+          ) : (
+            title
+          )}
         </h3>
         <p className="mt-4 text-base leading-relaxed text-muted lg:text-lg">
           {description}
@@ -79,14 +95,14 @@ export function ProjectListRow({ project }: ProjectListRowProps) {
           className="w-full opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
           style={{ minHeight: "200px" }}
         >
-          <div className="rounded-2xl border border-border bg-surface p-5 shadow-2xl shadow-black/50 lg:p-6">
+          <div className="rounded-2xl border border-border bg-surface p-5 shadow-2xl shadow-accent/10 lg:p-6">
             <div
               className="flex min-h-[200px] items-center justify-center rounded-xl bg-background/70 px-6 py-8 lg:min-h-[240px] lg:px-8 lg:py-10"
               style={
                 hasPreview
                   ? undefined
                   : {
-                      background: `linear-gradient(160deg, ${color}22 0%, #1a1a1a 100%)`,
+                      background: `linear-gradient(160deg, ${color}1A 0%, #FFF9F6 100%)`,
                     }
               }
             >
