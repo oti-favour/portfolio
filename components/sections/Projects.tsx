@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "@/lib/gsap";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "@/components/ui/ProjectCard";
@@ -10,11 +12,14 @@ import type { PortfolioData } from "@/lib/types";
 const data = portfolioData as PortfolioData;
 
 export function Projects() {
+  const sectionRef = useRef<HTMLElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
+  // Drag to scroll (fine pointers only; touch uses native scrolling)
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
+    if (!window.matchMedia("(pointer: fine)").matches) return;
 
     let isDown = false;
     let startX = 0;
@@ -38,7 +43,6 @@ export function Projects() {
       isDown = false;
       track.classList.remove("dragging");
     };
-    // Suppress the click that ends a drag so cards don't open on drag-release.
     const onClickCapture = (e: MouseEvent) => {
       if (moved) {
         e.preventDefault();
@@ -60,6 +64,75 @@ export function Projects() {
     };
   }, []);
 
+  // Gentle auto-scroll (desktop only), pauses on hover and while dragging
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let raf = 0;
+    let paused = false;
+    let dir = 1;
+    const SPEED = 0.5;
+
+    const step = () => {
+      raf = requestAnimationFrame(step);
+      if (paused) return;
+      const max = track.scrollWidth - track.clientWidth;
+      if (max <= 1) return;
+      let next = track.scrollLeft + SPEED * dir;
+      if (next >= max) {
+        next = max;
+        dir = -1;
+      } else if (next <= 0) {
+        next = 0;
+        dir = 1;
+      }
+      track.scrollLeft = next;
+    };
+
+    const pause = () => {
+      paused = true;
+    };
+    const resume = () => {
+      paused = false;
+    };
+
+    track.addEventListener("pointerenter", pause);
+    track.addEventListener("pointerleave", resume);
+    track.addEventListener("pointerdown", pause);
+    window.addEventListener("pointerup", resume);
+    raf = requestAnimationFrame(step);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      track.removeEventListener("pointerenter", pause);
+      track.removeEventListener("pointerleave", resume);
+      track.removeEventListener("pointerdown", pause);
+      window.removeEventListener("pointerup", resume);
+    };
+  }, []);
+
+  // Pop-in reveal on scroll
+  useGSAP(
+    () => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const items = sectionRef.current?.querySelectorAll(".carousel-reveal");
+      if (!items || !items.length) return;
+      gsap.from(items, {
+        opacity: 0,
+        y: 50,
+        scale: 0.9,
+        duration: 0.6,
+        ease: "back.out(1.5)",
+        stagger: 0.08,
+        scrollTrigger: { trigger: trackRef.current, start: "top 82%" },
+      });
+    },
+    { scope: sectionRef }
+  );
+
   const scroll = (dir: number) => {
     const track = trackRef.current;
     if (!track) return;
@@ -67,15 +140,15 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-28 lg:py-40">
-      <div className="mx-auto mb-8 flex max-w-7xl items-end justify-between gap-6 px-6 lg:mb-12 lg:px-12">
+    <section ref={sectionRef} id="projects" className="py-20 lg:py-28">
+      <div className="mx-auto mb-6 flex max-w-7xl items-end justify-between gap-6 px-6 lg:mb-8 lg:px-12">
         <div>
           <SectionHeading title="Works" index="03" />
-          <p className="-mt-6 font-mono text-sm text-accent lg:-mt-10">
+          <p className="-mt-6 font-mono text-sm text-accent lg:-mt-8">
             works i&apos;m proud of
           </p>
           <p className="mt-2 max-w-md text-sm text-muted">
-            Drag sideways or use the arrows, then click to open.
+            Drag or swipe through the works, then open one.
           </p>
         </div>
         <div className="hidden shrink-0 gap-3 md:flex">
@@ -100,14 +173,16 @@ export function Projects() {
 
       <div
         ref={trackRef}
-        className="carousel-track flex gap-6 overflow-x-auto px-6 py-8 lg:gap-8 lg:px-12"
+        className="carousel-track flex gap-10 overflow-x-auto px-6 py-10 lg:gap-14 lg:px-12"
       >
         {data.projects.map((project, i) => (
           <div
             key={`${project.title}-${project.subtitle}`}
-            className="carousel-item w-[280px] shrink-0 sm:w-[340px] lg:w-[400px]"
+            className="carousel-item w-[280px] shrink-0 sm:w-[320px] lg:w-[380px]"
           >
-            <ProjectCard project={project} index={i} />
+            <div className="carousel-reveal">
+              <ProjectCard project={project} index={i} />
+            </div>
           </div>
         ))}
         <div className="w-2 shrink-0" aria-hidden="true" />

@@ -14,7 +14,7 @@ export function Experience() {
   });
 
   return (
-    <section id="experience" className="px-6 py-40 lg:px-12 lg:py-56">
+    <section id="experience" className="px-6 py-20 lg:px-12 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeading title="Experience" index="04" />
         <div ref={listRef} className="space-y-16 lg:space-y-24">

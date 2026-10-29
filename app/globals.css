@@ -199,8 +199,6 @@ html[data-cursor-hidden] .cursor-ring {
 
 /* Works carousel */
 .carousel-track {
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 1.5rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -209,25 +207,21 @@ html[data-cursor-hidden] .cursor-ring {
   display: none;
 }
 
-.carousel-track.dragging {
-  scroll-snap-type: none;
-}
-
 .carousel-item {
-  scroll-snap-align: start;
-  transition: transform 0.35s ease;
+  transition: transform 0.4s ease;
 }
 
 .carousel-item:nth-child(odd) {
-  transform: rotate(-1.4deg);
+  transform: rotate(-2deg);
 }
 
 .carousel-item:nth-child(even) {
-  transform: rotate(1.4deg);
+  transform: rotate(2deg);
 }
 
 .carousel-item:hover {
-  transform: translateY(-6px) rotate(0deg);
+  transform: translateY(-8px) rotate(0deg);
+  z-index: 2;
 }
 
 @media (prefers-reduced-motion: reduce) {
