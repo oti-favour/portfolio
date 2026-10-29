@@ -27,6 +27,7 @@ export function Header() {
   }
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
         isScrolled
@@ -102,10 +103,11 @@ export function Header() {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
+    </header>
 
-      {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-8 bg-background/98 backdrop-blur-md md:hidden">
+    {/* Mobile Menu Overlay */}
+    {isMenuOpen && (
+      <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 bg-background/98 backdrop-blur-md md:hidden">
           <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-4 right-6 text-foreground"
@@ -157,6 +159,6 @@ export function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
