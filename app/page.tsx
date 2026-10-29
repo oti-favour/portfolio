@@ -7,19 +7,23 @@ import { TechStack } from "@/components/sections/TechStack";
 import { Experience } from "@/components/sections/Experience";
 import { Projects } from "@/components/sections/Projects";
 import { CosmosBackground } from "@/components/ui/CosmosBackground";
+import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Marquee } from "@/components/ui/Marquee";
 
 export default function Home() {
   return (
     <>
       <CosmosBackground />
+      <CustomCursor />
       <Header />
       <EmailSidebar />
       <main className="relative z-10">
         <Hero />
         <About />
         <TechStack />
-        <Experience />
+        <Marquee />
         <Projects />
+        <Experience />
       </main>
       <Footer />
     </>
