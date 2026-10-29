@@ -11,7 +11,7 @@ export function About() {
   return (
     <section id="about" className="px-6 py-32 lg:px-12 lg:py-48">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading title="Me" />
+        <SectionHeading title="Me" index="01" />
         <div className="max-w-5xl">
           <AnimatedText
             as="p"

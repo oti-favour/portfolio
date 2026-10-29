@@ -22,7 +22,7 @@ export function TechStack() {
   return (
     <section className="px-6 py-32 lg:px-12 lg:py-48">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading title="My Stack" />
+        <SectionHeading title="My Stack" index="02" />
         <div ref={containerRef} className="flex flex-col gap-24 lg:gap-32">
           {categories.map((cat) => (
             <div key={cat.key} className="tech-category flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">

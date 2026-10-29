@@ -16,8 +16,8 @@ export function ExperienceCard({
       <h3 className="font-display text-4xl text-light transition-colors duration-300 group-hover:text-accent lg:text-5xl">
         {role}
       </h3>
-      <span className="text-xs uppercase tracking-widest text-muted">
-        {startDate} — {endDate}
+      <span className="font-mono text-xs uppercase tracking-widest text-muted">
+        {startDate} &ndash; {endDate}
       </span>
       {description && (
         <p className="mt-2 max-w-2xl text-base leading-relaxed text-muted lg:text-lg">

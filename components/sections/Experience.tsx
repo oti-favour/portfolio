@@ -16,7 +16,7 @@ export function Experience() {
   return (
     <section id="experience" className="px-6 py-40 lg:px-12 lg:py-56">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading title="Experience" />
+        <SectionHeading title="Experience" index="04" />
         <div ref={listRef} className="space-y-16 lg:space-y-24">
           {data.experience.map((exp) => (
             <div key={`${exp.company}-${exp.role}`} className="experience-entry">
